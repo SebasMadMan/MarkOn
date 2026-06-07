@@ -1,0 +1,50 @@
+//_header.scss
+// ==========================================
+// 1. SELECTOR PRINCIPAL: <header class="sticky">
+// ==========================================
+header.sticky {
+    position: sticky;
+    top: 0;
+    background-color: rgb(59, 57, 57);
+    z-index: 1000; // Evita que el contenido de la página tape al menú al hacer scroll
+
+    // Logo dentro del header
+    .logo {
+        background-color: black;
+        height: 15vh;
+        width: auto;
+    }
+
+    // Enlaces de navegación que están dentro del menú del header
+    .nav-link {
+        text-decoration: none;
+        color: violet;
+        transition: all 0.3s ease; // Suaviza la animación del hover
+
+        &:hover {
+            background-color: rgb(237, 168, 237);
+            color: black;
+        }
+    }
+}
+
+// ==========================================
+// 2. ELEMENTOS FUERA DEL HEADER
+// (Están en el contenido principal de la página)
+// ==========================================
+
+// Título principal (h1 class="title")
+.title {
+    font-size: 5rem;
+    font-family: 'Ultra', serif; // Asegurate de tener el link de Google Fonts en el <head>
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// Subtítulo (h2 class="colorF")
+.colorF {
+    color: black;
+}
+

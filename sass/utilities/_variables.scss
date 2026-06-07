@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+$fuentePrincipal: Rubik;
+$fuenteSecundaria: Ultra;
+$colorFuentePrincila: whitesmoke;
+$colorFondoBody: black;
+
+/*RESET DE CSS*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: $fuenteSecundaria;
+color: $fuentePrincipal;
+}
+
+/*Color fondo Body*/
+body{
+    background-color: $colorFondoBody;
+}
+
+/*Fuente de todos los H*/
+h1,h2,h3,h4,h5,h6{
+    font-family: $fuenteSecundaria; 
+}

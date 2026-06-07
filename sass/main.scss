@@ -1,0 +1,22 @@
+// sass -- watch sass/main.scss styles/styles.css
+
+// Utilidades
+
+@use "utilities/variables";
+@use "utilities/mixins";
+@use "utilities/animations";
+
+
+//Componentes
+
+@use "components/header";
+@use "components/footer";
+
+
+//Pages
+
+@use "pages/index";
+@use "pages/conocenos";
+@use "pages/conversemos";
+@use "pages/servicios";
+@use "pages/trabajos";
