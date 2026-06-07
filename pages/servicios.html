@@ -5,159 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarkOn - Servicios</title>
     <meta name="description" content="Ofrecemos soluciones innovadoras e integrales para potenciar tu negocio. Conocé nuestros servicios y proyectos destacados.">
+    <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-        <img src="../assets/MarkOk Logo.png" alt="Logo de MarkOn" class="logo" >
-        </a>
 
+    <!-- BLOQUE: HEADER / NAVIGATION -->
+    <header class="main-header sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            
-            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
-                MarkOn<span class="text-primary">.</span>
-                
-            </a>
+            <div class="container">
+                <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
+                    <img src="../assets/MarkOk Logo.png" alt="Logo de MarkOn" class="main-header__logo d-inline-block align-text-top me-2">
+                    MarkOn<span class="text-primary">.</span>
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./conocenos.html">Conócenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./trabajos.html">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./conversemos.html">Conversemos</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./conocenos.html">Conócenos</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./trabajos.html">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./conversemos.html">Conversemos</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-        <h1 class="title">Servicios</h1>
-        <!--h2>Somos más que una agencia creativa</h2>
-        <p>Transformamos visiones en impacto digital medible.</p-->
+    <main>
+        <!-- BLOQUE: HERO DE SERVICIOS -->
+        <section class="hero text-center">
+            <div class="container">
+                <h1 class="hero__title">Servicios</h1>
+                <h2 class="hero__subtitle">Transformamos visiones en impacto digital medible</h2>
+                <p class="hero__text">Estrategia, diseño y tecnología integrados bajo un mismo techo para llevar tu marca al siguiente nivel.</p>
+            </div>
+        </section>
 
-</header>
-
-<main class="flexBox">
-    <!-- Sección de Productos y Servicios -->
-<section class="caja">
-    <div>
-        
-        <!-- Encabezado de la sección -->
-        <div>
-            <div>
-                <h2>
+        <!-- BLOQUE: SECCIÓN DE SERVICIOS -->
+        <section class="services py-5">
+            <div class="container">
+                <h2 class="services__title text-center mb-5">
                     Nuestras soluciones <span class="highlight">On</span>
                 </h2>
-                <p>
-                    Estrategia, diseño y tecnología integrados bajo un mismo techo para llevar tu marca al siguiente nivel.
-                </p>
+
+                <!-- Grilla de Bootstrap para las tarjetas de servicios -->
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Tarjeta 1: Growth Marketing -->
+                    <div class="col-md-4 d-flex">
+                        <article class="service-card d-flex flex-column w-100">
+                            <div class="service-card__body flex-grow-1">
+                                <h3 class="service-card__title">Growth & Performance</h3>
+                                <p class="service-card__description">
+                                    No compramos clics, compramos resultados. Diseñamos y ejecutamos campañas de tráfico pago de alta precisión, respaldadas por ciencia de datos. Optimizamos cada etapa de tu embudo de ventas para maximizar el retorno de tu inversión y acelerar el crecimiento de tu negocio.
+                                </p>
+                            </div>
+                            <div class="service-card__footer mt-auto pt-3">
+                                <a href="./conversemos.html" class="btn btn-outline-custom w-100">Saber más</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Tarjeta 2: Branding & Identidad -->
+                    <div class="col-md-4 d-flex">
+                        <article class="service-card d-flex flex-column w-100">
+                            <div class="service-card__body flex-grow-1">
+                                <h3 class="service-card__title">Branding & Identidad</h3>
+                                <p class="service-card__description">
+                                    Creamos identidades visuales que no solo capturan la atención, sino que se quedan grabadas en la mente de tu audiencia. Desde el concepto inicial hasta el despliegue digital, estructuramos la estética, la voz y el diseño de interfaz que tu marca necesita para liderar su mercado con autoridad.
+                                </p>
+                            </div>
+                            <div class="service-card__footer mt-auto pt-3">
+                                <a href="./conversemos.html" class="btn btn-outline-custom w-100">Saber más</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Tarjeta 3: Tech Integrations -->
+                    <div class="col-md-4 d-flex">
+                        <article class="service-card d-flex flex-column w-100">
+                            <div class="service-card__body flex-grow-1">
+                                <h3 class="service-card__title">Tech & E-commerce Hub</h3>
+                                <p class="service-card__description">
+                                    Construimos el motor tecnológico de tu empresa. Desarrollamos plataformas web y tiendas online veloces, seguras y optimizadas para SEO. Integramos herramientas de automatización y analítica para que tu ecosistema digital funcione de manera inteligente bajo un mismo techo.
+                                </p>
+                            </div>
+                            <div class="service-card__footer mt-auto pt-3">
+                                <a href="./conversemos.html" class="btn btn-outline-custom w-100">Saber más</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
             </div>
+        </section>
+    </main>
+
+    <!-- BLOQUE: FOOTER (Consistencia absoluta de clases globales) -->
+    <footer class="main-footer py-4 bg-dark text-light text-center">
+        <div class="container">
+            <p class="main-footer__copyright">&copy; 2026 MarkOn - Derechos Reservados</p>
+            <p class="main-footer__author">Creado por <span class="fw-bold">SebasMadMan</span></p>
+
+            <nav class="main-footer__nav mt-3">
+                <ul class="main-footer__social-list list-unstyled d-flex justify-content-center gap-3 m-0">
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="../assets/logos/Instagram.png" alt="Instagram" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../assets/logos/Facebook.png" alt="Facebook" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.x.com" target="_blank"><img src="../assets/logos/X (Twitter).png" alt="X" class="main-footer__icon"></a></li>
+                    <li><a href="https://web.whatsapp.com" target="_blank"><img src="../assets/logos/Whatsapp Web.png" alt="Whatsapp" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="../assets/logos/Linkedin.png" alt="Linkedin" class="main-footer__icon"></a></li>
+                </ul>
+            </nav>
         </div>
+    </footer> 
 
-        <div>
-            
-            <!-- Tarjeta 1: Growth Marketing -->
-            <div>
-                <article class="cajaA">
-                    <div>
-                    </div>
-                    <h3>Growth & Performance</h3>
-                    <p>
-                        No compramos clics, compramos resultados. Diseñamos y ejecutamos campañas de tráfico pago de alta precisión, respaldadas por ciencia de datos. Optimizamos cada etapa de tu embudo de ventas para maximizar el retorno de tu inversión y acelerar el crecimiento de tu negocio.
-                    </p>
-                    <div class="mt-auto pt-3">
-                        <a href="../pages/conversemos.html"  class="btn btn-outline-custom">Saber más</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Tarjeta 2: Branding & Identidad -->
-            <div>
-                <article class="cajaA">
-                    <div>
-                    </div>
-                    <h3>Branding & Identidad</h3>
-                    <p>
-                        Creamos identidades visuales que no solo capturan la atención, sino que se quedan grabadas en la mente de tu audiencia. Desde el concepto inicial hasta el despliegue digital, estructuramos la estética, la voz y el diseño de interfaz que tu marca necesita para liderar su mercado con autoridad.
-                    </p>
-                    <div class="mt-auto pt-3">
-                        <a href="../pages/conversemos.html"  class="btn btn-outline-custom">Saber más</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Tarjeta 3: Tech Integrations -->
-            <div>
-                <article class="cajaA">
-                    <div>
-                    </div>
-                    <h3>Tech & E-commerce Hub</h3>
-                    <p>
-                        Construimos el motor tecnológico de tu empresa. Desarrollamos plataformas web y tiendas online veloces, seguras y optimizadas para SEO. Integramos herramientas de automatización y analítica para que tu ecosistema digital funcione de manera inteligente bajo un mismo techo.
-                    </p>
-                    <div>
-                        <a href="../pages/conversemos.html"  class="btn btn-outline-custom">Saber más</a>
-                    </div>
-                </article>
-            </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-    <footer>
-        <h2 class="foot">Derechos Reservados</h2>
-
-        <h2 class="foot">Creado por SebasMadMan</h2>
-
-        <nav>
-            <ul class="rs d-flex justify-content-center align-items-center list-unstyled p-0 gap-3">
-                <li>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="../assets/logos/Instagram.png" alt="Logo de Instagram" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="../assets/logos/Facebook.png" alt="Logo de Facebook" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.x.com" target="_blank">
-                        <img src="../assets/logos/X (Twitter).png" alt="Logo de X (Twitter)" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://web.whatsapp.com" target="_blank">
-                        <img src="../assets/logos/Whatsapp Web.png" alt="Logo de Whatsapp Web" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com" target="_blank">
-                        <img src="../assets/logos/Linkedin.png" alt="Logo de Linkedin" class="rrss">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </footer>  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

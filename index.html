@@ -9,140 +9,108 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header class="sticky">
-        <a href="./index.html">
-            <img src="./assets/MarkOk Logo.png" alt="Logo de MarkOn" class="logo">
-        </a>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            
-            <a class="navbar-brand fw-bold text-uppercase" href="./index.html">MarkOn</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <nav>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/conocenos.html">Conócenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/trabajos.html">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/conversemos.html">Conversemos</a>
-                    </li>
-                </ul>
+    <header class="main-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-uppercase" href="./index.html">
+                    <img src="./assets/MarkOk Logo.png" alt="Logo de MarkOn" class="main-header__logo d-inline-block align-text-top me-2">
+                    MarkOn
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/conocenos.html">Conócenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/trabajos.html">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/conversemos.html">Conversemos</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        </div>
-    </nav>
-        <h1 class="title">MarkOn</h1>
-        <h2 class="colorF">Marketing Agency</h2>
-        <p class="colorF">En MarkOn fusionamos estrategia, creatividad y diseño digital para transformar clics en clientes y visibilidad en resultados reales. Llevamos tu negocio al siguiente nivel.</p>
-        
-        <hr>
-
     </header>
 
-    <main class="flexBox">
-        <section class="caja">
-                <h2>No somos solo creatividad; somos el motor que multiplica el alcance de tu marca y potencia su mensaje.</h2>
-                <p>Fusionamos creatividad, desarrollo tecnológico, análisis de datos y estructura organizacional en un solo lugar con un único propósito:</p>
-                <p>Diseñar experiencias de marca que inspiren y movilicen.</p> 
-                <p>Cuidamos cada etapa de los proyectos, asegurando que cada punto de contacto con el usuario potencie el valor real de las compañías que confían en nosotros.</p>
-                <p>Alineamos la empatía con la visión estratégica.</p> 
-                <p>Creemos en transformar las ideas en activos tangibles y memorables, trabajando codo a codo con líderes y empresas de diversas industrias decididas a liderar su mercado mediante soluciones creativas y con impacto real.</p>
+    <main>
+        <section class="hero text-center">
+            <div class="container">
+                <h1 class="hero__title">MarkOn</h1>
+                <h2 class="hero__subtitle">Marketing Agency</h2>
+                <p class="hero__text">En MarkOn fusionamos estrategia, creatividad y diseño digital para transformar clics en clientes y visibilidad en resultados reales. Llevamos tu negocio al siguiente nivel.</p>
+            </div>
         </section>
 
-    <section class="caja" >
-        <div>
-            <h2>Caso de <span class="highlight">éxito</span></h2>        
-                <div>
-                    <div>
-                        <div>
-                        <p>
-                        Buscábamos una agencia y encontramos un socio estratégico invaluable. El equipo de MarkOn entendió la complejidad de nuestro software desde el primer día; estructuraron una estrategia basada en datos que transformó por completo nuestra presencia digital.
-                        </p>
-                        <hr>
-                        <h4 class="client-name">Alejandro Fontana</h4>
-                        <p class="client-role">Growth Director, CoreFlow Solutions</p>
+        <section class="about-us py-5">
+            <div class="container text-center">
+                <h2 class="about-us__title">No somos solo creatividad; somos el motor que multiplica el alcance de tu marca y potencia su mensaje.</h2>
+                <div class="about-us__content">
+                    <p>Fusionamos creatividad, desarrollo tecnológico, análisis de datos y estructura organizacional en un solo lugar con un único propósito:</p>
+                    <p class="fw-bold">Diseñar experiencias de marca que inspiren y movilicen.</p> 
+                    <p>Cuidamos cada etapa de los proyectos, asegurando que cada punto de contacto con el usuario potencie el valor real de las compañías que confían en nosotros.</p>
+                    <p class="fw-bold">Alineamos la empatía con la visión estratégica.</p> 
+                    <p>Creemos en transformar las ideas en activos tangibles y memorables, trabajando codo a codo con líderes y empresas de diversas industrias decididas a liderar su mercado mediante soluciones creativas y con impacto real.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Casos de <span class="highlight">éxito</span></h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="testimonial-card">
+                            <p class="testimonial-card__quote">
+                                "Buscábamos una agencia y encontramos un socio estratégico invaluable. El equipo de MarkOn entendió la complejidad de nuestro software desde el primer día; estructuraron una estrategia basada en datos que transformó por completo nuestra presencia digital."
+                            </p>
+                            <hr class="testimonial-card__divider">
+                            <h4 class="testimonial-card__client">Alejandro Fontana</h4>
+                            <p class="testimonial-card__role">Growth Director, CoreFlow Solutions</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <article class="testimonial-card">
+                            <p class="testimonial-card__quote">
+                                "Trabajar con MarkOn marcó un antes y un después en nuestro canal de ventas online. Potenciaron nuestra identidad visual y crearon campañas segmentadas que verdaderamente conectaron con nuestro público ideal. ¡Nuestras ventas se multiplicaron!"
+                            </p>
+                            <hr class="testimonial-card__divider">
+                            <h4 class="testimonial-card__client">Clara Benítez</h4>
+                            <p class="testimonial-card__role">Fundadora y Directora Creativa, Vesta Studio</p>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-        <section class="caja">
-            <div>
-                <h2>Caso de <span class="highlight">éxito</span></h2>
-                    <div>
-                        <div>
-                            <div>
-                                <p>
-                                    Trabajar con MarkOn marcó un antes y un después en nuestro canal de ventas online. Potenciaron nuestra identidad visual y crearon campañas segmentadas que verdaderamente conectaron con nuestro público ideal. ¡Nuestras ventas se multiplicaron!
-                                </p>
-                                <hr>
-                                <h4 class="client-name">Clara Benítez</h4>
-                                <p class="client-role">Fundadora y Directora Creativa, Vesta Studio</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>               
-            </div>
         </section>
 
-        <section class="cajaD">
-            <article>
-            <a href="./pages/conversemos.html" class="btn-custom">Consultas comerciales</a>
-            </article>
+        <section class="cta text-center py-5">
+            <div class="container">
+                <a href="./pages/conversemos.html" class="btn-custom btn-custom--primary">Consultas comerciales</a>
+            </div>
         </section>
     </main>
 
+    <footer class="main-footer py-4 bg-dark text-light text-center">
+        <div class="container">
+            <p class="main-footer__copyright">&copy; 2026 MarkOn - Derechos Reservados</p>
+            <p class="main-footer__author">Creado por <span class="fw-bold">SebasMadMan</span></p>
 
-    <footer>
-        <h2 class="foot">Derechos Reservados</h2>
-
-        <h2 class="foot">Creado por SebasMadMan</h2>
-
-<nav>
-    <ul class="rs d-flex justify-content-center align-items-center list-unstyled p-0 gap-3">
-        <li>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="./assets/logos/Instagram.png" alt="Logo de Instagram" class="rrss">
-            </a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="./assets/logos/Facebook.png" alt="Logo de Facebook" class="rrss">
-            </a>
-        </li>
-        <li>
-            <a href="https://www.x.com" target="_blank">
-                <img src="./assets/logos/X (Twitter).png" alt="Logo de X (Twitter)" class="rrss">
-            </a>
-        </li>
-        <li>
-            <a href="https://web.whatsapp.com" target="_blank">
-                <img src="./assets/logos/Whatsapp Web.png" alt="Logo de Whatsapp Web" class="rrss">
-            </a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com" target="_blank">
-                <img src="./assets/logos/Linkedin.png" alt="Logo de Linkedin" class="rrss">
-            </a>
-        </li>
-    </ul>
-</nav>
-
+            <nav class="main-footer__nav mt-3">
+                <ul class="main-footer__social-list list-unstyled d-flex justify-content-center gap-3 m-0">
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="./assets/logos/Instagram.png" alt="Instagram" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="./assets/logos/Facebook.png" alt="Facebook" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.x.com" target="_blank"><img src="./assets/logos/X (Twitter).png" alt="X" class="main-footer__icon"></a></li>
+                    <li><a href="https://web.whatsapp.com" target="_blank"><img src="./assets/logos/Whatsapp Web.png" alt="Whatsapp" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="./assets/logos/Linkedin.png" alt="Linkedin" class="main-footer__icon"></a></li>
+                </ul>
+            </nav>
+        </div>
     </footer> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

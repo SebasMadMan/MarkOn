@@ -5,126 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarkOn - Conversemos</title>
     <meta name="description" content="Ofrecemos soluciones innovadoras e integrales para potenciar tu negocio. Conocé nuestros servicios y proyectos destacados.">
+    <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-        <img src="../assets/MarkOk Logo.png" alt="Logo de MarkOn" class="logo">
-        </a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            
-            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
-                MarkOn<span class="text-primary">.</span>
-                
-            </a>
+    <!-- BLOQUE: HEADER / NAVIGATION -->
+    <header class="main-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
+                    <img src="../assets/MarkOk Logo.png" alt="Logo de MarkOn" class="main-header__logo d-inline-block align-text-top me-2">
+                    MarkOn<span class="text-primary">.</span>
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./conocenos.html">Conócenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./trabajos.html">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active"  aria-current="page" href="./conversemos.html">Conversemos</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./conocenos.html">Conócenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./trabajos.html">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./conversemos.html">Conversemos</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
-        <h1 class="title">Conversemos</h1>
-        <!--h2>Somos más que una agencia creativa</h2>
-        <p>Transformamos visiones en impacto digital medible.</p-->   
-
-</header>
-
-<main class="flexBox">
-    <form action="">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" placeholder="John Doe">
-    
-        <label for="surname">Apellido:</label>
-        <input type="text" id="surname" placeholder="Doe">
-
-        <label for="age">Edad:</label>
-        <input type="number" id="age" placeholder="25">
-
-        <label for="mail">E-Mail</label>
-        <input type="email" id="mail" placeholder="johndoe@gmail.com">
-
-        <label for="pass">Contraseña:</label>
-        <input type="password" id="pass">
-
-        <label for="text">Dejanos tus comentarios:</label>
-        <textarea id="comments" placeholder="Comentarios..."></textarea>
-
-        <!--Boton de enviar--> 
-        <input type="submit" value="enviar"> 
-
-        <!--Comenzar de nuevo-->
-        <input type="reset" value="Comenzar de nuevo">
-
-        <input type="date" name="" id="">
-    </form>
-
-    
-    <h2>MarkOn en el mapa</h2>
-        <p>Coordinemos un café</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52367.87913643751!2d-56.1577984!3d-34.881536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a02ab4184f34a1%3A0x152124bbef653ab5!2sMuseo%20Juan%20Manuel%20Blanes!5e0!3m2!1ses!2suy!4v1780606968412!5m2!1ses!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</main>
-
-    <footer>
-        <h2 class="foot">Derechos Reservados</h2>
-
-        <h2 class="foot">Creado por SebasMadMan</h2>
-
-        <nav>
-            <ul class="rs d-flex justify-content-center align-items-center list-unstyled p-0 gap-3">
-                <li>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="../assets/logos/Instagram.png" alt="Logo de Instagram" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="../assets/logos/Facebook.png" alt="Logo de Facebook" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.x.com" target="_blank">
-                        <img src="../assets/logos/X (Twitter).png" alt="Logo de X (Twitter)" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://web.whatsapp.com" target="_blank">
-                        <img src="../assets/logos/Whatsapp Web.png" alt="Logo de Whatsapp Web" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com" target="_blank">
-                        <img src="../assets/logos/Linkedin.png" alt="Logo de Linkedin" class="rrss">
-                    </a>
-                </li>
-            </ul>
         </nav>
+    </header>
 
+    <main>
+        <!-- BLOQUE: HERO DE CONVERSEMOS -->
+        <section class="hero text-center">
+            <div class="container">
+                <h1 class="hero__title">Conversemos</h1>
+                <h2 class="hero__subtitle">¿Tenés un proyecto en mente?</h2>
+                <p class="hero__text">Transformamos visiones en impacto digital medible. Ponete en contacto con nosotros y llevemos tu marca al siguiente nivel.</p>
+            </div>
+        </section>
+
+        <!-- BLOQUE: CONTACTO (Formulario y Mapa en dos columnas balanceadas) -->
+        <section class="contact py-5">
+            <div class="container">
+                <div class="row g-5">
+                    
+                    <!-- Columna del Formulario -->
+                    <div class="col-lg-6">
+                        <form action="" class="contact-form p-4 shadow-sm rounded bg-white">
+                            <h3 class="contact-form__title mb-4">Escribinos</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6 contact-form__group">
+                                    <label for="name" class="form-label contact-form__label">Nombre</label>
+                                    <input type="text" id="name" class="form-control contact-form__input" placeholder="John">
+                                </div>
+                            
+                                <div class="col-md-6 contact-form__group">
+                                    <label for="surname" class="form-label contact-form__label">Apellido</label>
+                                    <input type="text" id="surname" class="form-control contact-form__input" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-4 contact-form__group">
+                                    <label for="age" class="form-label contact-form__label">Edad</label>
+                                    <input type="number" id="age" class="form-control contact-form__input" placeholder="25">
+                                </div>
+
+                                <div class="col-md-8 contact-form__group">
+                                    <label for="mail" class="form-label contact-form__label">E-Mail</label>
+                                    <input type="email" id="mail" class="form-control contact-form__input" placeholder="johndoe@gmail.com">
+                                </div>
+                            </div>
+
+                            <div class="contact-form__group mt-3">
+                                <label for="comments" class="form-label contact-form__label">Dejanos tus comentarios</label>
+                                <textarea id="comments" class="form-control contact-form__textarea" rows="4" placeholder="Contanos sobre tu negocio o consulta..."></textarea>
+                            </div>
+
+                            <!-- Botones de Acción -->
+                            <div class="contact-form__actions mt-4 d-flex gap-2">
+                                <button type="submit" class="btn btn-custom btn-custom--primary flex-grow-1">Enviar Mensaje</button>
+                                <button type="reset" class="btn btn-outline-secondary">Reiniciar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Columna del Mapa e Info -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <div class="contact-info ps-lg-4 text-center text-lg-start">
+                            <h2 class="contact-info__title">MarkOn en el mapa</h2>
+                            <p class="contact-info__text text-muted mb-4">Coordinemos un café para planificar tu próxima estrategia digital.</p>
+                            
+                            <!-- Contenedor responsivo para el mapa de Google -->
+                            <div class="contact-info__map-wrapper ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52367.87913643751!2d-56.1577984!3d-34.881536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a02ab4184f34a1%3A0x152124bbef653ab5!2sMuseo%20Juan%20Manuel%20Blanes!5e0!3m2!1ses!2suy!4v1780606968412!5m2!1ses!2suy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BLOQUE: FOOTER -->
+    <footer class="main-footer py-4 bg-dark text-light text-center">
+        <div class="container">
+            <p class="main-footer__copyright">&copy; 2026 MarkOn - Derechos Reservados</p>
+            <p class="main-footer__author">Creado por <span class="fw-bold">SebasMadMan</span></p>
+
+            <nav class="main-footer__nav mt-3">
+                <ul class="main-footer__social-list list-unstyled d-flex justify-content-center gap-3 m-0">
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="../assets/logos/Instagram.png" alt="Instagram" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../assets/logos/Facebook.png" alt="Facebook" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.x.com" target="_blank"><img src="../assets/logos/X (Twitter).png" alt="X" class="main-footer__icon"></a></li>
+                    <li><a href="https://web.whatsapp.com" target="_blank"><img src="../assets/logos/Whatsapp Web.png" alt="Whatsapp" class="main-footer__icon"></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="../assets/logos/Linkedin.png" alt="Linkedin" class="main-footer__icon"></a></li>
+                </ul>
+            </nav>
+        </div>
     </footer> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
