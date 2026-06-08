@@ -1,0 +1,17 @@
+// sass/utilities/_mixins.scss
+
+// 1. Mixin para estructurar cualquier tarjeta del sitio
+@mixin card-layout($bg-color, $border-color, $radius: 12px) {
+    background: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// 2. Mixin para centrar elementos con Flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -7,18 +7,15 @@ $color-light: whitesmoke;
 $color-border-glow: rgba(139, 92, 246, 0.2);
 $bg-card: rgba(255, 255, 255, 0.02);
 
-/*
-$fuentePrincipal: Rubik;
-$fuenteSecundaria: Ultra;
-$colorFuentePrincila: whitesmoke;
-$colorFondoBody: black;
+// Colores de Marca
+$color-primary: #8b5cf6;       // Morado de MarkOn
+$color-primary-dark: #6d28d9;  // Morado oscuro para hovers
+$color-light: #f8f9fa;         // Whitesmoke / Claro
+$color-dark: #111827;          // Negro profundo para fondos de tarjetas oscuras
+$color-text-dark: #1f2937;     // Gris oscuro para textos sobre fondos claros
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: $fuenteSecundaria;
-color: $fuentePrincipal;
-}*/
+// Fondos de componentes
+$bg-main: #000000;
+$bg-section-alt: #0b0f19;      
 
 

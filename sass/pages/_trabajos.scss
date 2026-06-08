@@ -1,24 +1,53 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
 
 .projects {
-    background-color: #0b0f19;
-    min-height: 80vh;
+    background-color: v.$bg-section-alt;
+    padding: 5rem 0;
 }
 
 .project-card {
-    background: v.$bg-card;           
-    border: 1px solid v.$color-border-glow; 
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
+    @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.15), 15px);
+    margin-bottom: 2rem;
+
+    &__title {
+        color: v.$color-light;
+        font-size: 2rem;
+    }
+
+    // Solución directa al texto oscuro: forzamos el color primario pisando a text-muted
+    &__client {
+        color: v.$color-primary !important;
+        display: block;
+        margin-top: 0.5rem;
+    }
+
+    &__body {
+        margin-top: 1.5rem;
+    }
+
+    &__description {
+        color: v.$color-light;
+        line-height: 1.6;
+    }
 
     &__subtitle {
-        font-family: v.$font-title;   
-        font-size: 1rem;
+        font-family: v.$font-title;
+        font-size: 1.2rem;
+        color: v.$color-light;
         text-align: left;
     }
 
-    &__list {
-        text-align: left;
+    // Estilización del contenedor interno blanco de Bootstrap
+    .list-group-item {
+        background-color: #ffffff;
+        color: v.$color-text-dark !important; 
+        border-color: #e5e7eb;
+        padding: 1rem 1.2rem;
+
+        strong {
+            color: v.$color-primary !important; 
+            font-weight: 700;
+        }
     }
 }

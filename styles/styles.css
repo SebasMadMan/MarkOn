@@ -1,30 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
-/*
-$fuentePrincipal: Rubik;
-$fuenteSecundaria: Ultra;
-$colorFuentePrincila: whitesmoke;
-$colorFondoBody: black;
-
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: $fuenteSecundaria;
-color: $fuentePrincipal;
-}*/
 .main-header {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1030;
   background-color: rgb(59, 57, 57);
+  padding: 0.5rem 0;
 }
 .main-header__logo {
   max-height: 40px !important;
   width: auto !important;
   display: inline-block;
-  background-color: black;
+  background-color: transparent !important;
 }
 
 .hero__title {
@@ -33,7 +21,7 @@ color: $fuentePrincipal;
   text-align: center;
 }
 .hero__text {
-  color: whitesmoke;
+  color: #f8f9fa;
 }
 
 .colorF {
@@ -73,62 +61,308 @@ color: $fuentePrincipal;
   transform: scale(1.1);
 }
 
+.home-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url("../../assets/MarkOn fondo1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 6rem 0;
+  width: 100%;
+}
+
 .testimonials {
   background-color: #0b0f19;
-  min-height: 80vh;
+  padding: 5rem 0;
+}
+.testimonials__title {
+  color: #f8f9fa;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.testimonials__title .highlight {
+  color: #8b5cf6;
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(139, 92, 246, 0.2);
   border-radius: 12px;
   padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+.testimonial-card__quote {
+  color: #1f2937 !important;
+  font-style: italic;
+}
+.testimonial-card__divider {
+  border-top: 1px solid rgba(139, 92, 246, 0.3);
+  margin: 1.5rem 0;
+}
+.testimonial-card__client {
+  color: #8b5cf6 !important;
+  font-size: 1.3rem;
+}
+.testimonial-card__role {
+  color: #6b7280 !important;
+  font-size: 0.9rem;
+}
+
+.about {
+  background-color: #000000;
+  padding: 5rem 0;
+}
+.about__title {
+  color: #f8f9fa;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.about__text {
+  color: #f8f9fa;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+.about__section.bg-light {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.about__section.bg-light .about__title {
+  color: #8b5cf6 !important;
+}
+.about__section.bg-light .about__quote p {
+  color: #1f2937 !important;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.objectives {
+  background-color: #0b0f19;
+  padding: 5rem 0;
+}
+.objectives__title {
+  color: #f8f9fa;
+  font-size: 3rem;
+  font-family: "Ultra", serif;
+}
+.objectives__intro {
+  color: #9ca3af !important;
+  font-size: 1.1rem;
+}
+
+.objective-card {
+  background: #111827;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.objective-card:hover {
+  transform: translateY(-5px);
+  border-color: #8b5cf6;
+}
+.objective-card__title {
+  color: #8b5cf6 !important;
+  font-size: 1.3rem;
+  font-family: "Ultra", serif;
+  margin-bottom: 1rem;
+}
+.objective-card__text {
+  color: #f8f9fa !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.contact {
+  background-color: #000000;
+  padding: 5rem 0;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #8b5cf6;
+}
+.contact-form__title {
+  color: #8b5cf6 !important;
+  font-family: "Ultra", serif;
+  font-size: 2rem;
+}
+oscuro legible .contact-form__label {
+  color: #1f2937 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.contact-form__input, .contact-form__textarea {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border: 1px solid #ced4da !important;
+  padding: 0.6rem 0.75rem;
+}
+.contact-form__input:focus, .contact-form__textarea:focus {
+  border-color: #8b5cf6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25) !important;
+}
+.contact-form__input::placeholder, .contact-form__textarea::placeholder {
+  color: #9ca3af;
+}
+.contact-form__actions .btn-custom--primary {
+  background-color: #8b5cf6 !important;
+  color: #f8f9fa !important;
+  font-family: "Ultra", serif;
+  font-size: 1rem;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+.contact-form__actions .btn-custom--primary:hover {
+  background-color: #6d28d9 !important;
+  color: #f8f9fa !important;
+}
+.contact-form__actions .btn-outline-secondary {
+  border-color: #6b7280 !important;
+  color: #6b7280 !important;
+}
+.contact-form__actions .btn-outline-secondary:hover {
+  background-color: #6b7280 !important;
+  color: #ffffff !important;
+}
+
+.contact-info__title {
+  color: #f8f9fa;
+  font-family: "Ultra", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.contact-info__text {
+  color: #9ca3af !important;
+  font-size: 1.1rem;
+}
+.contact-info__map-wrapper {
+  border: 2px solid rgba(139, 92, 246, 0.15);
+  overflow: hidden;
+  background-color: #111827;
+}
+
+.services-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url("../../assets/MarkOn fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 6rem 0 4rem 0;
+  width: 100%;
 }
 
 .services {
-  background-color: #0b0f19;
-  min-height: 80vh;
+  background-color: #050505;
+  padding: 5rem 0;
+}
+.services__title {
+  color: #f8f9fa;
+  font-family: "Ultra", serif;
+  font-size: 2.5rem;
+}
+.services__title .highlight {
+  color: #8b5cf6;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: #111827;
+  border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 15px;
   padding: 30px;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-.btn-outline-custom {
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15);
+}
+.service-card__title {
+  color: #f8f9fa;
   font-family: "Ultra", serif;
-  font-size: 1rem;
-  color: whitesmoke;
-  border-color: whitesmoke;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
 }
-.btn-outline-custom:hover {
-  background-color: whitesmoke;
-  color: black;
+.service-card__description {
+  color: #b3b9c1 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.service-card .btn-outline-custom {
+  border: 2px solid #8b5cf6 !important;
+  color: #f8f9fa !important;
+  background-color: transparent !important;
+  font-family: "Ultra", serif;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+}
+.service-card .btn-outline-custom:hover {
+  background-color: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  color: #f8f9fa !important;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
 }
 
 .projects {
   background-color: #0b0f19;
-  min-height: 80vh;
+  padding: 5rem 0;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: #111827;
+  border: 1px solid rgba(139, 92, 246, 0.15);
   border-radius: 15px;
-  padding: 40px;
-  text-align: center;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+.project-card__title {
+  color: #f8f9fa;
+  font-size: 2rem;
+}
+.project-card__client {
+  color: #8b5cf6 !important;
+  display: block;
+  margin-top: 0.5rem;
+}
+.project-card__body {
+  margin-top: 1.5rem;
+}
+.project-card__description {
+  color: #f8f9fa;
+  line-height: 1.6;
 }
 .project-card__subtitle {
   font-family: "Ultra", serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #f8f9fa;
   text-align: left;
 }
-.project-card__list {
-  text-align: left;
+.project-card .list-group-item {
+  background-color: #ffffff;
+  color: #1f2937 !important;
+  border-color: #e5e7eb;
+  padding: 1rem 1.2rem;
+}
+.project-card .list-group-item strong {
+  color: #8b5cf6 !important;
+  font-weight: 700;
 }
 
 * {
@@ -136,7 +370,7 @@ color: $fuentePrincipal;
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  color: whitesmoke;
+  color: #f8f9fa;
 }
 
 body {

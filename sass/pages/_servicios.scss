@@ -1,26 +1,74 @@
+// sass/pages/_servicios.scss
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
 
+// 1. Cabecera superior (Se mantiene impecable)
+.services-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../../assets/MarkOn fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 6rem 0 4rem 0;
+    width: 100%;
+}
+
+// 2. CORRECCIÓN DEL FONDO: Pasamos a un negro pleno que unifica con la imagen
 .services {
-    background-color: #0b0f19;
-    min-height: 80vh;
+    background-color: #050505; // Un negro profundo que absorbe de forma natural la transición superior
+    padding: 5rem 0;
+
+    &__title {
+        color: v.$color-light;
+        font-family: v.$font-title;
+        font-size: 2.5rem;
+        
+        .highlight {
+            color: v.$color-primary; // Asegura que el "On" brille en morado
+        }
+    }
 }
 
+// 3. MEJORA DE TARJETAS Y BOTONES INVISIBLES
 .service-card {
-    background: v.$bg-card;           
-    border: 1px solid v.$color-border-glow; 
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-}
-
-.btn-outline-custom {
-    font-family: v.$font-title;       
-    font-size: 1rem;
-    color: v.$color-light;            
-    border-color: v.$color-light;     
+    // Usamos el mixin: fondo gris oscuro profundo (v.$color-dark) y borde morado sutil
+    @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.25), 15px);
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-        background-color: v.$color-light; 
-        color: black;
+        transform: translateY(-5px);
+        border-color: v.$color-primary;
+        box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15); // Destello morado flotante
+    }
+
+    &__title {
+        color: v.$color-light;
+        font-family: v.$font-title;
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    &__description {
+        color: #b3b9c1 !important; // Gris claro para una lectura impecable sobre el fondo oscuro
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    // ARREGLO DEL BOTÓN INVISIBLE: Le damos el estilo personalizado de MarkOn
+    .btn-outline-custom {
+        border: 2px solid v.$color-primary !important;
+        color: v.$color-light !important;
+        background-color: transparent !important;
+        font-family: v.$font-title;
+        padding: 0.6rem 1.2rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: v.$color-primary !important; // Se rellena de morado al pasar el mouse
+            border-color: v.$color-primary !important;
+            color: v.$color-light !important;
+            box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+        }
     }
 }

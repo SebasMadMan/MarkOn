@@ -1,0 +1,82 @@
+// sass/pages/_conocenos.scss
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+
+.about {
+    background-color: v.$bg-main;
+    padding: 5rem 0;
+
+    &__title {
+        color: v.$color-light;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        color: v.$color-light;
+        line-height: 1.7;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+
+    
+    &__section.bg-light {
+        @include m.card-layout(rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2), 12px);
+        
+        .about__title {
+            color: v.$color-primary !important; 
+        }
+        
+        .about__quote p {
+            color: v.$color-text-dark !important; 
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+
+.objectives {
+    background-color: v.$bg-section-alt; // Fondo gris azulado oscuro
+    padding: 5rem 0;
+
+    &__title {
+        color: v.$color-light;
+        font-size: 3rem;
+        font-family: v.$font-title;
+    }
+
+    &__intro {
+        color: #9ca3af !important;  
+        font-size: 1.1rem;
+    }
+}
+
+
+.objective-card {
+    
+    @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.2), 12px);
+    height: 100%; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: v.$color-primary; // Enciende el borde en morado al pasar el mouse
+    }
+
+    &__title {
+        color: v.$color-primary !important; 
+        font-size: 1.3rem;
+        font-family: v.$font-title;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: v.$color-light !important; // Contraste óptimo
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+}

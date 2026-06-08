@@ -1,0 +1,97 @@
+// sass/pages/_conversemos.scss
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+// Contenedor principal de la sección de contacto
+.contact {
+    background-color: v.$bg-main;
+    padding: 5rem 0;
+}
+
+// ESTILIZACIÓN DEL FORMULARIO 
+.contact-form {
+    // Mixin para estructurar la tarjeta blanca del formulario
+    @include m.card-layout(rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2), 12px);
+    border-top: 5px solid v.$color-primary; // Línea superior morada institucional
+
+    &__title {
+        color: v.$color-primary !important; 
+        font-family: v.$font-title;
+        font-size: 2rem;
+    }
+
+    oscuro legible
+    &__label {
+        color: v.$color-text-dark !important;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    // Control de los campos de texto internos
+    &__input,
+    &__textarea {
+        background-color: #ffffff !important;
+        color: v.$color-text-dark !important;
+        border: 1px solid #ced4da !important;
+        padding: 0.6rem 0.75rem;
+
+        &:focus {
+            border-color: v.$color-primary !important;
+            box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25) !important;
+        }
+
+        &::placeholder {
+            color: #9ca3af;
+        }
+    }
+
+    // ARREGLO DE LOS BOTONES
+    &__actions {
+        .btn-custom--primary {
+            background-color: v.$color-primary !important;
+            color: v.$color-light !important;
+            font-family: v.$font-title;
+            font-size: 1rem;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: v.$color-primary-dark !important;
+                color: v.$color-light !important;
+            }
+        }
+
+        .btn-outline-secondary {
+            border-color: #6b7280 !important;
+            color: #6b7280 !important;
+
+            &:hover {
+                background-color: #6b7280 !important;
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+// ESTILIZACIÓN DE LA COLUMNA DEL MAPA 
+.contact-info {
+    &__title {
+        color: v.$color-light;
+        font-family: v.$font-title;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__text {
+        color: #9ca3af !important; 
+        font-size: 1.1rem;
+    }
+
+    &__map-wrapper {
+        border: 2px solid rgba(139, 92, 246, 0.15);
+        overflow: hidden;
+        background-color: v.$color-dark;
+    }
+}
