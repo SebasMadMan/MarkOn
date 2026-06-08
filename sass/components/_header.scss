@@ -1,50 +1,47 @@
-//_header.scss
-// ==========================================
-// 1. SELECTOR PRINCIPAL: <header class="sticky">
-// ==========================================
-header.sticky {
+@use "../utilities/variables" as v; // Importa tu archivo de variables con el alias 'v'
+
+.main-header {
+    width: 100%;
     position: sticky;
     top: 0;
+    z-index: 1030;
     background-color: rgb(59, 57, 57);
-    z-index: 1000; // Evita que el contenido de la página tape al menú al hacer scroll
 
-    // Logo dentro del header
-    .logo {
+    &__logo {
+        max-height: 40px !important; // Evita los 15vh viejos que rompían el navbar
+        width: auto !important;
+        display: inline-block;
         background-color: black;
-        height: 15vh;
-        width: auto;
     }
+}
 
-    // Enlaces de navegación que están dentro del menú del header
+// Estilos para los elementos del Hero y títulos adaptados
+.hero {
+    &__title {
+        font-size: 5rem;
+        font-family: v.$font-title;
+        text-align: center;
+    }
+    
+    &__text {
+        color: v.$color-light;
+    }
+}
+
+.colorF {
+    color: black; // Mantiene tu especificación original
+}
+
+// Nesting de los enlaces de navegación integrados con Bootstrap
+.navbar-nav {
     .nav-link {
         text-decoration: none;
-        color: violet;
-        transition: all 0.3s ease; // Suaviza la animación del hover
+        color: violet !important;
+        transition: background-color 0.2s ease, color 0.2s ease;
 
         &:hover {
             background-color: rgb(237, 168, 237);
-            color: black;
+            color: black !important;   
         }
     }
 }
-
-// ==========================================
-// 2. ELEMENTOS FUERA DEL HEADER
-// (Están en el contenido principal de la página)
-// ==========================================
-
-// Título principal (h1 class="title")
-.title {
-    font-size: 5rem;
-    font-family: 'Ultra', serif; // Asegurate de tener el link de Google Fonts en el <head>
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-// Subtítulo (h2 class="colorF")
-.colorF {
-    color: black;
-}
-

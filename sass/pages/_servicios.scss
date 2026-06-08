@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+
+.services {
+    background-color: #0b0f19;
+    min-height: 80vh;
+}
+
+.service-card {
+    background: v.$bg-card;           
+    border: 1px solid v.$color-border-glow; 
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.btn-outline-custom {
+    font-family: v.$font-title;       
+    font-size: 1rem;
+    color: v.$color-light;            
+    border-color: v.$color-light;     
+
+    &:hover {
+        background-color: v.$color-light; 
+        color: black;
+    }
+}

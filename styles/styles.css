@@ -1,3 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+/*
+$fuentePrincipal: Rubik;
+$fuenteSecundaria: Ultra;
+$colorFuentePrincila: whitesmoke;
+$colorFondoBody: black;
 
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: $fuenteSecundaria;
+color: $fuentePrincipal;
+}*/
+.main-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: rgb(59, 57, 57);
+}
+.main-header__logo {
+  max-height: 40px !important;
+  width: auto !important;
+  display: inline-block;
+  background-color: black;
+}
+
+.hero__title {
+  font-size: 5rem;
+  font-family: "Ultra", serif;
+  text-align: center;
+}
+.hero__text {
+  color: whitesmoke;
+}
+
+.colorF {
+  color: black;
+}
+
+.navbar-nav .nav-link {
+  text-decoration: none;
+  color: violet !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+  background-color: rgb(237, 168, 237);
+  color: black !important;
+}
+
+.main-footer {
+  background-color: #212529;
+  padding: 2rem 0;
+  text-align: center;
+}
+.main-footer__copyright, .main-footer__author {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9rem;
+}
+.main-footer__social-list {
+  list-style: none;
+  padding: 0;
+}
+.main-footer__icon {
+  width: 35px !important;
+  height: 35px !important;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.main-footer__icon:hover {
+  transform: scale(1.1);
+}
+
+.testimonials {
+  background-color: #0b0f19;
+  min-height: 80vh;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.services {
+  background-color: #0b0f19;
+  min-height: 80vh;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.btn-outline-custom {
+  font-family: "Ultra", serif;
+  font-size: 1rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+.btn-outline-custom:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.projects {
+  background-color: #0b0f19;
+  min-height: 80vh;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+}
+.project-card__subtitle {
+  font-family: "Ultra", serif;
+  font-size: 1rem;
+  text-align: left;
+}
+.project-card__list {
+  text-align: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: whitesmoke;
+}
+
+body {
+  background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ultra", serif;
+}
 
 /*# sourceMappingURL=styles.css.map */

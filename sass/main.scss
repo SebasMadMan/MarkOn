@@ -1,22 +1,34 @@
-// sass -- watch sass/main.scss styles/styles.css
+// npx sass --watch sass/main.scss:styles/styles.css
 
-// Utilidades
-
-@use "utilities/variables";
+// 1. UTILIDADES
+@use "utilities/variables" as v;
 @use "utilities/mixins";
 @use "utilities/animations";
 
-
-//Componentes
-
+// 2. COMPONENTES
 @use "components/header";
 @use "components/footer";
 
-
-//Pages
-
+// 3. PÁGINAS
 @use "pages/index";
 @use "pages/conocenos";
 @use "pages/conversemos";
 @use "pages/servicios";
 @use "pages/trabajos";
+
+// 4. ESTILOS GLOBALES / RESET (Líneas 24 en adelante)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$font-main;
+    color: v.$color-light;
+}
+
+body {
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: v.$font-title; 
+}

@@ -1,41 +1,28 @@
 @use "../utilities/variables" as v;
-@use "../utilities/mixins" as m;
-// _footer.scss
 
-/*footer {
-    // Estilos para la etiqueta contenedora general <footer>
-    
-    h2 {
-        font-family: 'Ultra', serif;
-        font-size: 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+.main-footer {
+    background-color: #212529;
+    padding: 2rem 0;
+    text-align: center;
 
-        // Estilos específicos si el h2 tiene además la clase .foot (h2 class="foot")
-        &.foot {
-            font-family: 'Rubik', sans-serif;
-            font-size: 0.9rem;
-            // Al heredar el display flex del padre h2, ya se alinean solos
-        }
+    &__copyright, &__author {
+        font-family: v.$font-main;
+        font-size: 0.9rem;
     }
 
-    // Navegación de redes sociales dentro del footer
-    nav {
-        .rs {
-            list-style: none; // Desactiva los puntitos de la lista u/
-            
-            // Los íconos de las imágenes (img class="rrss") adentro de la lista
-            .rrss {
-                height: 8vh;
-                width: auto;
-                transition: transform 0.2s ease; // Un pequeño tip para suavizar si querés meter hover
+    &__social-list {
+        list-style: none;
+        padding: 0;
+    }
 
-                &:hover {
-                    transform: scale(1.1); // Hace que el ícono crezca un poquito al pasar el mouse
-                }
-            }
+    &__icon {
+        width: 35px !important;  // Reemplaza de forma segura el 8vh viejo que agrandaba el icono
+        height: 35px !important;
+        object-fit: contain;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.1);
         }
     }
-}*/
+}

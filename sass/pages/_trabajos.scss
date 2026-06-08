@@ -1,0 +1,24 @@
+@use "../utilities/variables" as v;
+
+.projects {
+    background-color: #0b0f19;
+    min-height: 80vh;
+}
+
+.project-card {
+    background: v.$bg-card;           
+    border: 1px solid v.$color-border-glow; 
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+
+    &__subtitle {
+        font-family: v.$font-title;   
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    &__list {
+        text-align: left;
+    }
+}
