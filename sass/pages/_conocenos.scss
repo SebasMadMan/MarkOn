@@ -1,6 +1,10 @@
+// sass/pages/_conocenos.scss
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
 
+// ==========================================================================
+// 1. SECCIÓN PRINCIPAL: SOBRE NOSOTROS
+// ==========================================================================
 .about {
     background-color: v.$bg-main;
     padding: 5rem 0;
@@ -18,6 +22,7 @@
         margin-bottom: 1.5rem;
     }
 
+    // Bloque destacado con fondo lavado institucional
     &__section.bg-light {
         // Superpongo una capa grisácea muy clara (90% de opacidad) que "lava" tu fondo oscuro original
         @include m.card-layout(
@@ -26,8 +31,9 @@
             12px
         );
         
-        
-        background-image: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.93)), url('../../assets/MarkOn fondo.png') !important;
+        // CORRECCIÓN DE RUTA: Cambiado de '../../assets/' a '../assets/' para asegurar la lectura en GitHub
+        background-image: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.93)), 
+                          url('../assets/MarkOn fondo.png') !important;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -45,6 +51,9 @@
     }
 }
 
+// ==========================================================================
+// 2. SECCIÓN DE OBJETIVOS ESTRATÉGICOS
+// ==========================================================================
 .objectives {
     background-color: v.$bg-section-alt; // Fondo gris azulado oscuro
     padding: 5rem 0;
@@ -61,6 +70,9 @@
     }
 }
 
+// ==========================================================================
+// 3. TARJETAS DE OBJETIVOS (EMPATÍA, ESTRATEGIA, VALOR)
+// ==========================================================================
 .objective-card {
     @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.2), 12px);
     height: 100%; 
@@ -79,7 +91,7 @@
     }
 
     &__text {
-        color: v.$color-light !important; // Contraste sobre el fondo oscuro
+        color: v.$color-light !important; // Contraste óptimo sobre el fondo oscuro
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 0;

@@ -1,11 +1,18 @@
+// sass/pages/_trabajos.scss
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
 
+// ==========================================================================
+// 1. SECCIÓN PRINCIPAL DE PROYECTOS
+// ==========================================================================
 .projects {
     background-color: v.$bg-section-alt;
     padding: 5rem 0;
 }
 
+// ==========================================================================
+// 2. TARJETAS DE CASOS DE ESTUDIO
+// ==========================================================================
 .project-card {
     @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.15), 15px);
     margin-bottom: 2rem;
@@ -21,15 +28,18 @@
         margin-top: 0.5rem;
     }
 
+    // Estilización del bloque contenedor de Bootstrap
     .list-group {
         border-radius: 12px !important; // Le da una curvatura agradable y moderna a las puntas
         overflow: hidden;               // Corta las esquinas rectas de los elementos de adentro
         border: 1px solid rgba(139, 92, 246, 0.25); // Un marco sutil que une todo el bloque
     }
 
-
+    // Estilización de los ítems internos de la lista
     .list-group-item {
-        background-image: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.9)), url('../../assets/MarkOn fondo1.png') !important;
+        // CORRECCIÓN DE RUTA: Cambiado de '../../assets/' a '../assets/' para compatibilidad estricta con GitHub
+        background-image: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.9)), 
+                          url('../assets/MarkOn fondo1.png') !important;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -39,6 +49,7 @@
         padding: 1.2rem;
         font-size: 1.05rem;
 
+        // Resaltado de las etiquetas internas (ej: Acciones, Desafíos)
         strong {
             color: #a78bfa !important; 
             font-weight: 700;
@@ -47,6 +58,3 @@
         }
     }
 }
-
-
-

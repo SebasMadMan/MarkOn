@@ -2,9 +2,13 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
 
-// 1. Cabecera superior (Se mantiene impecable)
+// ==========================================================================
+// 1. CABECERA SUPERIOR (Ruta corregida a un solo nivel para GitHub)
+// ==========================================================================
 .services-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../../assets/MarkOn fondo.png');
+    // CORRECCIÓN: Cambiado de '../../assets/' a '../assets/'
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                      url('../assets/MarkOn fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +17,9 @@
     width: 100%;
 }
 
-// 2. CORRECCIÓN DEL FONDO: Pasamos a un negro pleno que unifica con la imagen
+// ==========================================================================
+// 2. CONTENEDOR PRINCIPAL DE SERVICIOS
+// ==========================================================================
 .services {
     background-color: #050505; // Un negro profundo que absorbe de forma natural la transición superior
     padding: 5rem 0;
@@ -29,7 +35,9 @@
     }
 }
 
-// 3. MEJORA DE TARJETAS Y BOTONES INVISIBLES
+// ==========================================================================
+// 3. TARJETAS DE SERVICIOS INDIVIDUALEZ (MARKETING, DISEÑO, TRÁFICO)
+// ==========================================================================
 .service-card {
     // Usamos el mixin: fondo gris oscuro profundo (v.$color-dark) y borde morado sutil
     @include m.card-layout(v.$color-dark, rgba(139, 92, 246, 0.25), 15px);
@@ -55,7 +63,7 @@
         line-height: 1.6;
     }
 
-    // ARREGLO DEL BOTÓN INVISIBLE: Le damos el estilo personalizado de MarkOn
+    // Estilización del botón de acción integrado con Bootstrap
     .btn-outline-custom {
         border: 2px solid v.$color-primary !important;
         color: v.$color-light !important;
