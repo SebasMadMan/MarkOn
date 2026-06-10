@@ -1,5 +1,8 @@
 @use "../utilities/variables" as v; 
 
+// ==========================================================================
+// 1. CABECERA Y NAVEGACIÓN PRINCIPAL
+// ==========================================================================
 .main-header {
     width: 100%;
     position: sticky;
@@ -7,41 +10,33 @@
     z-index: 1030;
     background-color: rgb(59, 57, 57);
     padding: 0.5rem 0;
+    height: auto !important; // FUERZA a que el contenedor crezca si el menú se despliega
 
     &__logo {
-        max-height: 40px !important; // Evita los 15vh viejos que rompían el navbar
+        max-height: 40px !important; 
         width: auto !important;
         display: inline-block;
-        background-color: transparent !important; // Elimino el fondo rígido de CSS
+        background-color: transparent !important; 
         
         transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
 
         &:hover {
-            // Efecto de Forma: Se agranda un 8% y rota un grado de manera fluida
             transform: scale(1.08) rotate(1deg); 
-            
-            // Efecto de Color: Satura el morado y le añade un brillo de neón (drop-shadow)
-            // que se adapta al contorno del logo cuando ya es transparente.
             filter: saturate(140%) drop-shadow(0 0 8px rgba(139, 92, 246, 0.65));
         }
     }
 }
 
-// Estilos para los elementos del Hero y títulos adaptados
-.hero {
-    &__title {
-        font-size: 5rem;
-        font-family: v.$font-title;
-        text-align: center;
-    }
+// INTEGRACIÓN CORRECTA: Control del despliegue responsivo de Bootstrap
+.navbar-collapse {
+    width: 100%; 
     
-    &__text {
-        color: v.$color-light;
+    // El ampersand '&' pegado a '.show' compila como '.navbar-collapse.show'
+    // Esto aplica el espaciado interno SOLO cuando el menú está abierto en móviles
+    &.show {
+        padding-top: 1rem;
+        padding-bottom: 0.5rem; 
     }
-}
-
-.colorF {
-    color: black; // Mantiene la especificación original
 }
 
 // Nesting de los enlaces de navegación integrados con Bootstrap
@@ -56,4 +51,23 @@
             color: black !important;   
         }
     }
+}
+
+// ==========================================================================
+// 2. SECCIÓN HERO Y ELEMENTOS EDITORIALES
+// ==========================================================================
+.hero {
+    &__title {
+        font-size: 5rem;
+        font-family: v.$font-title;
+        text-align: center;
+    }
+    
+    &__text {
+        color: v.$color-light;
+    }
+}
+
+.colorF {
+    color: black; // Mantiene la especificación original
 }

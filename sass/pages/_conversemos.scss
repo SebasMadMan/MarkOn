@@ -2,15 +2,37 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
 
-// Contenedor principal de la sección de contacto
+// ==========================================================================
+// 1. ADAPTACIÓN RESPONSIVA: Título fluido para evitar desbordamientos
+// ==========================================================================
+.hero {
+    &__title {
+        font-family: v.$font-title;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        
+        // SOLUCIÓN AL DESBORDAMIENTO: Usa un tamaño fluido moderno
+        // Mínimo: 2.8rem (en móviles), Escala: 8vw (se adapta al ancho), Máximo: 5rem (en computadoras)
+        font-size: clamp(2.8rem, 8vw, 5rem) !important;
+        line-height: 1.1;
+        word-wrap: break-word; // Asegura que si una palabra es larguísima, se parta limpiamente
+    }
+}
+
+// ==========================================================================
+// 2. CONTENEDOR PRINCIPAL DE LA SECCIÓN DE CONTACTO
+// ==========================================================================
 .contact {
     background-color: v.$bg-main;
     padding: 5rem 0;
 }
 
-// ESTILIZACIÓN DEL FORMULARIO 
+// ==========================================================================
+// 3. ESTILIZACIÓN DEL FORMULARIO 
+// ==========================================================================
 .contact-form {
-    // Mixin para estructurar la tarjeta blanca del formulario
+    // Mixin para integrar la tarjeta blanca del formulario con sombra morada
     @include m.card-layout(rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2), 12px);
     border-top: 5px solid v.$color-primary; // Línea superior morada institucional
 
@@ -20,7 +42,8 @@
         font-size: 2rem;
     }
 
-    oscuro legible
+    // CORRECCIÓN: Comentario formateado correctamente para evitar errores de compilación
+    // Texto oscuro legible
     &__label {
         color: v.$color-text-dark !important;
         font-weight: 600;
@@ -75,7 +98,9 @@
     }
 }
 
-// ESTILIZACIÓN DE LA COLUMNA DEL MAPA 
+// ==========================================================================
+// 4. ESTILIZACIÓN DE LA COLUMNA DE INFORMACIÓN Y MAPA 
+// ==========================================================================
 .contact-info {
     &__title {
         color: v.$color-light;
