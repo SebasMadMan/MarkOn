@@ -13,9 +13,6 @@
     width: 100%;
 }
 
-// ==========================================================================
-// 2. SECCIÓN DE TESTIMONIOS: Integración de la Opción 2 (Fondo Claro con Textura)
-// ==========================================================================
 .testimonials {
     // Superponemos una capa grisácea/blanca ultra clara (entre 92% y 94% de opacidad) 
     // sobre tu imagen oscura original para transformarla en tonos pastel por código.
@@ -42,9 +39,6 @@
     }
 }
 
-// ==========================================================================
-// 3. TARJETAS DE TESTIMONIOS: Ajustadas para resaltar sobre el fondo claro
-// ==========================================================================
 .testimonial-card {
     // Usamos el mixin con un fondo blanco satinado (97% opaco), borde morado sutil y esquinas redondeadas
     @include m.card-layout(rgba(255, 255, 255, 0.97), rgba(139, 92, 246, 0.15), 16px);
@@ -103,4 +97,4 @@
             text-decoration: underline;
         }
     }
-}
+}  
