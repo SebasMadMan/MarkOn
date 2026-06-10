@@ -1,28 +1,51 @@
 @use "../utilities/variables" as v;
+@use "../utilities/animations" as a; // Importo utilidades de animación
 
 .main-footer {
-    background-color: #212529;
-    padding: 2rem 0;
-    text-align: center;
+    background-color: v.$color-dark; 
+    padding: 3rem 0;
 
-    &__copyright, &__author {
-        font-family: v.$font-main;
+    &__copyright {
+        color: #9ca3af;
+        font-size: 0.95rem;
+    }
+
+    &__author {
+        color: #6b7280;
         font-size: 0.9rem;
+        
+        span {
+            color: v.$color-light;
+        }
     }
 
+    // CONTENEDOR DE REDES SOCIALES
     &__social-list {
-        list-style: none;
-        padding: 0;
+        margin-top: 1.5rem;
+        
+        li {
+            display: inline-block;
+        }
     }
 
+    // LA ANIMACIÓN DE LOS LINKS INTERACTIVOS
     &__icon {
-        width: 35px !important;  // Reemplaza el 8vh viejo que agrandaba el icono
-        height: 35px !important;
+        width: 32px;  
+        height: 32px;
         object-fit: contain;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease, filter 0.3s ease; // Transición suave para volver al estado original
 
         &:hover {
-            transform: scale(1.1);
+            //Eleva el icono 5px hacia arriba de forma responsiva
+            transform: translateY(-5px) scale(1.1);
+            
+            
+            filter: invert(49%) sepia(82%) saturate(2468%) x(264deg) y(91%) z(65%) 
+                    drop-shadow(0px 4px 8px rgba(139, 92, 246, 0.4)); 
         }
     }
 }
+
+
+
+
