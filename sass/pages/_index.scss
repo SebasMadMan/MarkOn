@@ -4,7 +4,7 @@
 
 // 1. HERO CONTENEDOR PRINCIPAL (.home-hero se mantiene igual con su filtro oscuro)
 .home-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../../assets/MarkOn fondo1.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../assets/MarkOn fondo1.png');
     background-size: cover;         
     background-position: center;    
     background-repeat: no-repeat;   
@@ -17,7 +17,7 @@
     // Superponemos una capa grisácea/blanca ultra clara (entre 92% y 94% de opacidad) 
     // sobre tu imagen oscura original para transformarla en tonos pastel por código.
     background-image: linear-gradient(rgba(245, 246, 248, 0.92), rgba(245, 246, 248, 0.94)), 
-                      url('../../assets/MarkOn fondo.png') !important;
+                      url('../assets/MarkOn fondo.png') !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -93,7 +93,7 @@
 }
 
 .home-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url("../../assets/MarkOn fondo1.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url("../assets/MarkOn fondo1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@
 }
 
 .testimonials {
-  background-image: linear-gradient(rgba(245, 246, 248, 0.92), rgba(245, 246, 248, 0.94)), url("../../assets/MarkOn fondo.png") !important;
+  background-image: linear-gradient(rgba(245, 246, 248, 0.92), rgba(245, 246, 248, 0.94)), url("../assets/MarkOn fondo.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
