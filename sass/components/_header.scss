@@ -13,6 +13,17 @@
         width: auto !important;
         display: inline-block;
         background-color: transparent !important; // Elimino el fondo rígido de CSS
+        
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+
+        &:hover {
+            // Efecto de Forma: Se agranda un 8% y rota un grado de manera fluida
+            transform: scale(1.08) rotate(1deg); 
+            
+            // Efecto de Color: Satura el morado y le añade un brillo de neón (drop-shadow)
+            // que se adapta al contorno del logo cuando ya es transparente.
+            filter: saturate(140%) drop-shadow(0 0 8px rgba(139, 92, 246, 0.65));
+        }
     }
 }
 
