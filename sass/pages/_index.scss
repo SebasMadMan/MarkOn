@@ -1,55 +1,106 @@
 // sass/pages/_index.scss
 @use "../utilities/variables" as v;
-@use "../utilities/mixins" as m; // Aquí sí es correcto invocar el módulo externo
+@use "../utilities/mixins" as m; 
 
+// 1. HERO CONTENEDOR PRINCIPAL (.home-hero se mantiene igual con su filtro oscuro)
 .home-hero {
-    // Apunta correctamente a la ubicación de tu imagen subiendo un nivel desde la carpeta styles
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../../assets/MarkOn fondo1.png');
-    background-size: cover;         // Forza a la imagen a cubrir todo el espacio sin deformarse
-    background-position: center;    // Centra el fondo de forma responsiva
-    background-repeat: no-repeat;   // Evita que la imagen se duplique en mosaico
-    background-attachment: fixed;   // Opcional: Le da un efecto parallax premium al scrollear en Mac
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;   
+    background-attachment: fixed;   
     padding: 6rem 0;
     width: 100%;
 }
 
+// ==========================================================================
+// 2. SECCIÓN DE TESTIMONIOS: Integración de la Opción 2 (Fondo Claro con Textura)
+// ==========================================================================
 .testimonials {
-    background-color: v.$bg-section-alt;
-    padding: 5rem 0;
+    // Superponemos una capa grisácea/blanca ultra clara (entre 92% y 94% de opacidad) 
+    // sobre tu imagen oscura original para transformarla en tonos pastel por código.
+    background-image: linear-gradient(rgba(245, 246, 248, 0.92), rgba(245, 246, 248, 0.94)), 
+                      url('../../assets/MarkOn fondo.png') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // Efecto parallax premium al hacer scroll en Mac
+    padding: 6rem 0;
 
+    // RESALTADO DEL TÍTULO: Forzamos el color oscuro para que no quede invisible
     &__title {
-        color: v.$color-light;
+        color: v.$color-dark !important; // Cambiado a tu negro corporativo para contraste óptimo
+        font-family: v.$font-title;
+        font-size: 3rem;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+        font-weight: 800;
         
         .highlight {
-            color: v.$color-primary;
+            color: v.$color-primary; // Tu morado encendido para el "On"
         }
     }
 }
 
+// ==========================================================================
+// 3. TARJETAS DE TESTIMONIOS: Ajustadas para resaltar sobre el fondo claro
+// ==========================================================================
 .testimonial-card {
-    // Invocación limpia del mixin mediante 'm.'
-    @include m.card-layout(rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2), 12px);
+    // Usamos el mixin con un fondo blanco satinado (97% opaco), borde morado sutil y esquinas redondeadas
+    @include m.card-layout(rgba(255, 255, 255, 0.97), rgba(139, 92, 246, 0.15), 16px);
     text-align: center;
+    height: 100%; // Altura uniforme en las columnas de Bootstrap
+    padding: 2.5rem 2rem;
+    
+    // Agregamos una sombra difuminada para despegar físicamente las tarjetas del fondo geométrico
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px); // Animación sutil al pasar el mouse
+        box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15) !important;
+    }
 
     &__quote {
-        color: v.$color-text-dark !important;
+        color: v.$color-text-dark !important; // Gris oscuro de alta legibilidad para el texto de la cita
         font-style: italic;
+        font-size: 1.1rem;
+        line-height: 1.7;
     }
 
     &__divider {
-        border-top: 1px solid rgba(139, 92, 246, 0.3);
-        margin: 1.5rem 0;
+        border-top: 1px solid rgba(139, 92, 246, 0.2);
+        margin: 1.8rem 0;
     }
 
     &__client {
-        color: v.$color-primary !important;
-        font-size: 1.3rem;
+        color: v.$color-primary !important; // El nombre del cliente resalta en tu morado base
+        font-size: 1.4rem;
+        font-family: v.$font-title;
+        font-weight: 700;
     }
 
     &__role {
-        color: #6b7280 !important;
-        font-size: 0.9rem;
+        color: #6b7280 !important; // Gris neutro para el cargo corporativo
+        font-size: 0.95rem;
+    }
+}
+
+// 4. EXTRA: Enlace inferior comercial
+.home-footer-links {
+    background-color: #000000;
+    padding: 2rem 0;
+    text-align: center;
+
+    .commercial-link {
+        color: #a78bfa !important; 
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: v.$color-light !important; 
+            text-decoration: underline;
+        }
     }
 }

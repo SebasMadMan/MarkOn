@@ -15,39 +15,38 @@
         font-size: 2rem;
     }
 
-    // Solución directa al texto oscuro: forzamos el color primario pisando a text-muted
     &__client {
         color: v.$color-primary !important;
         display: block;
         margin-top: 0.5rem;
     }
 
-    &__body {
-        margin-top: 1.5rem;
+    .list-group {
+        border-radius: 12px !important; // Le da una curvatura agradable y moderna a las puntas
+        overflow: hidden;               // Corta las esquinas rectas de los elementos de adentro
+        border: 1px solid rgba(139, 92, 246, 0.25); // Un marco sutil que une todo el bloque
     }
 
-    &__description {
-        color: v.$color-light;
-        line-height: 1.6;
-    }
 
-    &__subtitle {
-        font-family: v.$font-title;
-        font-size: 1.2rem;
-        color: v.$color-light;
-        text-align: left;
-    }
-
-    // Estilización del contenedor interno blanco de Bootstrap
     .list-group-item {
-        background-color: #ffffff;
-        color: v.$color-text-dark !important; 
-        border-color: #e5e7eb;
-        padding: 1rem 1.2rem;
+        background-image: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.9)), url('../../assets/MarkOn fondo1.png') !important;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        color: v.$color-light !important; 
+        border-color: rgba(139, 92, 246, 0.15) !important; // Líneas divisorias internas más sutiles
+        padding: 1.2rem;
+        font-size: 1.05rem;
 
         strong {
-            color: v.$color-primary !important; 
+            color: #a78bfa !important; 
             font-weight: 700;
+            display: inline-block;
+            margin-right: 6px;
         }
     }
 }
+
+
+

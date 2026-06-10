@@ -12,7 +12,7 @@
         max-height: 40px !important; // Evita los 15vh viejos que rompían el navbar
         width: auto !important;
         display: inline-block;
-        background-color: transparent !important; // Eliminamos el fondo rígido de CSS
+        background-color: transparent !important; // Elimino el fondo rígido de CSS
     }
 }
 
@@ -30,7 +30,7 @@
 }
 
 .colorF {
-    color: black; // Mantiene tu especificación original
+    color: black; // Mantiene la especificación original
 }
 
 // Nesting de los enlaces de navegación integrados con Bootstrap
